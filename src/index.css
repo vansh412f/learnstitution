@@ -1,0 +1,41 @@
+/* Reset some default browser styling */
+/* index.css or App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Matches the App's background */
+    color: #333;
+  }
+  
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Remove default margin from elements */
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  /* Links styling */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  * {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box; /* Good practice for consistent styling */
+  }
+  

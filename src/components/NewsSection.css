@@ -1,0 +1,183 @@
+/* NewsSection.css */
+.news-section {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+}
+
+.news-section h2 {
+  font-size: 2.5rem;
+  font-family: cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 25px;
+  color: #000b82;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #4a90e2;
+  padding-bottom: 10px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  gap: 20px;
+  justify-items: center;
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.news-card {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+}
+
+.news-text {
+  padding: 20px;
+}
+
+.news-image:empty {
+  display: block;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 200px;
+  color: #888;
+  font-size: 1rem;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.read-more {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+/* Button Styles */
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #70b0f9, #4a90e2);
+  border: 1.8px solid rgb(0, 0, 0);
+  color: #000000;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #4a90e2, #6a5acd);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button span {
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+
+.button:hover span {
+  transform: translateX(-210px);
+}
+
+.button i {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  transition: right 0.3s ease;
+  color: white;
+}
+
+.button:hover i {
+  right: 70px;
+}
+
+/* Responsive Design */
+
+/* For medium screens (tablets, smaller laptops) */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 15px;
+  }
+
+  .news-section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .news-card {
+    max-width: 100%; /* Expand cards to fit container */
+  }
+
+  .news-image {
+    height: 180px; /* Adjust height */
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+  .news-grid {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+  }
+
+  .news-section h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .news-image {
+    height: 150px; /* Reduce height for smaller images */
+  }
+
+  .news-text {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem; /* Smaller button text */
+  }
+
+  .button:hover span {
+    transform: none; /* Disable icon animation for simplicity */
+  }
+
+  .button i {
+    display: none; /* Hide icon on small screens */
+  }
+}

@@ -1,0 +1,136 @@
+/* Container and layout */
+.game-container {
+  text-align: center;
+  background: #f0f0f0; /* Light gray background for a clean look */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: "Arial", sans-serif;
+}
+
+/* Title */
+.game-title {
+  font-size: 30px;
+  font-weight: bold;
+  color:#001aff; /* Blue title */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Score */
+.score {
+  font-size: 20px;
+  color: #555; /* Neutral gray */
+  margin-bottom: 20px;
+}
+
+/* Question box styling */
+.question-box {
+  background: #ffffff; /* White background for contrast */
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-size: 20px;
+  color: #333; /* Dark gray text */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-button {
+  background-color: #e9ecef; /* Soft gray background for options */
+  color: #212529; /* Dark text for good contrast */
+  border: 2px solid transparent; /* Invisible border for alignment */
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+  background-color: #d6d8db; /* Slightly darker gray on hover */
+  transform: scale(1.02); /* Subtle zoom effect */
+}
+
+.option-button.correct-option {
+  border: 3px solid #28a745; /* Green border for correct answers */
+  color: #28a745;
+}
+
+.option-button.wrong-option {
+  border: 3px solid #dc3545; /* Red border for incorrect answers */
+  color: #dc3545;
+}
+
+/* Explanation and navigation */
+.explanation {
+  margin-top: 25px;
+  font-size: 16px;
+  color: #555; /* Neutral gray text */
+  text-align: left;
+  line-height: 1.5;
+}
+
+.next-button,
+.restart-button {
+  margin-top: 20px;
+  background-color: #007bff; /* Blue buttons for navigation */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.next-button:hover,
+.restart-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Game Over */
+.game-over {
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-over h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000; /* Bold red for game over text */
+  margin-bottom: 20px;
+}
+
+.game-over p {
+  font-size: 20px;
+  color: #333; /* Dark gray for score */
+  margin-bottom: 30px;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

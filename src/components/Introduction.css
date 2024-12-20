@@ -1,0 +1,141 @@
+/* Container for the entire introduction section */
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(90deg, #0164e5, #768afb);
+  color: white;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 90%;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards, slideInText 1s ease-out 0.5s, slideInImage 1s ease-out 0.5s;
+}
+
+/* Text section - left side */
+.intro-text {
+  max-width: 60%;
+  padding-right: 2rem;
+  flex: 1 1 60%;
+  transform: translateX(-100%); /* Initially off-screen */
+  animation: slideInText 1s ease-out forwards;
+}
+
+.intro-title {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  font-weight: 650;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intro-tagline {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: rgb(214, 214, 214);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.intro-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Image section - right side */
+.intro-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex: 1 1 40%;
+  transform: translateX(100%); /* Initially off-screen */
+  animation: slideInImage 1s ease-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for text */
+@keyframes slideInText {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in animation for image */
+@keyframes slideInImage {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-tagline {
+    font-size: 1.5rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+
+  .intro-image img {
+    max-width: 300px;
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+  .intro-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .intro-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-tagline {
+    font-size: 1.2rem;
+  }
+
+  .intro-description {
+    font-size: 0.9rem;
+  }
+
+  .intro-image img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

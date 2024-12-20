@@ -1,0 +1,100 @@
+/* Navbar Base Styling */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: linear-gradient(90deg, #003274, #768afb); /* Blue gradient */
+  padding: 1rem 1rem;
+  color: white;
+  flex-wrap: wrap; /* Enables wrapping for responsiveness */
+}
+
+/* Logo Styling */
+.navbar-logo video {
+  height: 60px; /* Increased size */
+  width: 60px; /* Uniform width */
+  border-radius: 50%; /* Rounded corners */
+  border: 2.5px solid #000000; /* Optional: Add a border for distinction */
+}
+
+/* Navbar Title */
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Lobster', cursive;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #dddddd;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  padding-top: 1.35rem;
+}
+
+/* Navigation Links Container */
+.navbar-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  justify-content: center; /* Align center when wrapping */
+}
+
+/* Navbar Links */
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .navbar-title {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .navbar-options {
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .navbar-title {
+    font-size: 1.8rem;
+  }
+
+  .navbar-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+}

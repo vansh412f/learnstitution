@@ -1,0 +1,99 @@
+/* ExternalAssistance.css */
+.external-assistance {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Lighter background for better contrast */
+    padding: 40px 20px;
+  }
+  
+  .external-assistance  h1 {
+    text-align: center;
+    color: #004e89; /* A slightly lighter shade of blue */
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .organizations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+  }
+  
+  .organization-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #e4e7f0; /* Soft light blue border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .organization-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .external-assistance  h2 {
+    font-size: 20px;
+    color: #003f66; /* Darker shade of blue for headers */
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .external-assistance  p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  strong {
+    color: #2b4f85; /* Slightly muted blue for important text */
+    font-weight: 600;
+  }
+  
+  .website-link {
+    align-self: flex-start;
+    padding: 12px 20px;
+    background-color: #005c99; /* Rich blue background */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .website-link:hover {
+    background-color: #004e89; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+  }
+  
+  .website-link:active {
+    background-color: #003f66; /* Darker blue when active */
+  }
+  
+  @media (max-width: 768px) {
+    .external-assistance {
+      padding: 20px;
+    }
+  
+    .organizations-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .organizations-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
